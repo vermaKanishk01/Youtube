@@ -2,11 +2,6 @@ const commentData = [
     {
         name: "kanishk verma",
         text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
-        replies: [],
-    },
-    {
-        name: "kanishk verma",
-        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
         replies: [
             {
                 name: "kanishk verma",
@@ -22,7 +17,100 @@ const commentData = [
     {
         name: "kanishk verma",
         text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
-        replies: [],
+        replies: [
+            {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [],
+            }, {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [
+                    {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [],
+            }, {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [
+                    {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [],
+            }, {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [],
+            },
+                ],
+            },
+                ],
+            },
+        ],
+    },
+    {
+        name: "kanishk verma",
+        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+        replies: [
+            {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [],
+            }, {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [
+                    {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [],
+            }, {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [
+                    {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [],
+            }, {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [
+                    {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [],
+            }, {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [{
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [],
+            }, {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [
+                    {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [],
+            }, {
+                name: "kanishk verma",
+                text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, vitae!",
+                replies: [],
+            },
+                ],
+            },],
+            },
+                ],
+            },
+                ],
+            },
+                ],
+            }
+        ],
     },
     {
         name: "kanishk verma",
@@ -47,9 +135,7 @@ const CommentsList = ({ comments }) => {
         <div key={index} className="m-2">
             <Comment data={comment} />
             <div className="pl-2 border-l m-2 border-l-black ml-5">
-                <Comment data={comment} />
-                <Comment data={comment} />
-                <Comment data={comment} />
+                <CommentsList comments={comment.replies} />
             </div>
         </div>
     ))
